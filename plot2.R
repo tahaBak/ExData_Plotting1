@@ -1,6 +1,6 @@
 
-getwd()
 
+Sys.setlocale("LC_TIME","en_US.utf8")
 
 myData<-read.csv("household_power_consumption.txt", sep=";",colClasses = c("character","character","numeric","numeric","numeric",
                                                                            "numeric","numeric","numeric"),na.strings="?")
@@ -20,11 +20,15 @@ tail(usefulData)
 usefulData$Date<-as.character(usefulData$Date)
 
 usefulData$timeAndDate<-paste(usefulData$Date,usefulData$Time,sep=":")
-head(usefulData.timeAndDate)
+head(usefulData$timeAndDate)
 
-usefulData$timeAndDateFormat<-strptime(usefulData.timeAndDate,format="%Y-%m-%d:%T")
+usefulData$timeAndDateFormat<-strptime(usefulData$timeAndDate,format="%Y-%m-%d:%T")
 head(usefulData$timeAndDateFormat)
 
 length(usefulData$timeAndDateFormat)
 length(usefulData$Global_active_power)
 plot(usefulData$timeAndDateFormat,usefulData$Global_active_power,type="l",xlab="",ylab="Global Active Power (kilowatts)")
+
+
+dev.copy(png,file="plot2.png")
+dev.off()

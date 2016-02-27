@@ -1,5 +1,5 @@
 
-getwd()
+Sys.setlocale("LC_TIME","en_US.utf8")
 
 
 myData<-read.csv("household_power_consumption.txt", sep=";",colClasses = c("character","character","numeric","numeric","numeric",
@@ -25,3 +25,5 @@ hist(usefulData$Global_active_power,main="Global Active Power", col="red",xlab="
 colnames(myData)
 head(myData)
 
+dev.copy(png,file="plot1.png")
+dev.off()
