@@ -28,8 +28,6 @@ head(usefulData$timeAndDateFormat)
 
 x<-usefulData$timeAndDateFormat
 
-
-
 plot.new()
 frame()
 plot.new()
