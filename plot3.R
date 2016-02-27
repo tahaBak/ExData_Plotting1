@@ -34,8 +34,9 @@ plot(x,y1,xlab="",ylab="",type="l" ,ylim=range(y1) , col="black",yaxt="n")
 par(new=TRUE)
 plot(x,y2,xlab="",ylab="",type="l" ,ylim=range(y1) , yaxt="n",col="red")
 par(new=TRUE)
-plot(x,y3,xlab="",ylab="",type="l" ,ylim=range(y1) , col="blue",yaxt="n")
+plot(x,y3,xlab="",ylab="",type="l" ,ylim=range(y1) , col="blue")
 mtext("Energy Sub metering",side=2, line=2)
+axis(side = 2,lwd = 4)
 legend("topright", lty = c("solid","solid","solid"),pch=c(NA,NA,NA),col=c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
 
 #recording the graph in the plot3.png using correct dimensions

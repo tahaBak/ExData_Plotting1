@@ -41,7 +41,7 @@ par(mfrow=c(2,2))
 par(mfg=c(1,1))
 y1_11<-usefulData$Global_active_power
 plot(x,y1_11,xlab="",ylab="",type="l" ,ylim=range(y1_11) , col="black" ,yaxt="n")
-axis(side = 2,lwd = 2)
+axis(side = 2,lwd = 4)
 mtext("Global Active Power",side=2, line=3)
 
 #Voltage
@@ -50,7 +50,7 @@ y1_12<-usefulData$Voltage
 plot(x,y1_12,xlab="",ylab="",type="l" ,ylim=range(y1_12) , col="black",yaxt="n")
 mtext("Voltage",side=2, line=4)
 mtext("datetime",side=1, line=4)
-axis(side = 2,lwd = 2)
+axis(side = 2,lwd = 4)
 
 #pot 3
 par(mfg=c(2,1))
@@ -63,7 +63,7 @@ par(new=TRUE)
 plot(x,y2_21,xlab="",ylab="",type="l" ,ylim=range(y1_21) , yaxt="n",col="red")
 par(new=TRUE)
 plot(x,y3_21,xlab="",ylab="",type="l" ,ylim=range(y1_21) , col="blue",yaxt="n")
-axis(side = 2,lwd = 2)
+axis(side = 2,lwd = 4)
 mtext("Energy sub metering",side=2, line=3)
 legend("topright", lty = c("solid","solid","solid"),pch=c(NA,NA,NA),bty = "n",col=c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
 
@@ -75,7 +75,7 @@ y1_22<-usefulData$Global_reactive_power
 plot(x,y1_22,xlab="",ylab="",type="l" ,ylim=range(y1_22) , col="black",yaxt="n")
 mtext("Global_reactive_power",side=2, line=4)
 mtext("datetime",side=1, line=4)
-axis(side = 2,lwd = 2)
+axis(side = 2,lwd = 4)
 
 dev.off()
 
